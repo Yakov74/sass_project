@@ -1,0 +1,62 @@
+body{
+    background-color: aqua;
+}
+h1{
+    text-align: center;
+    color: rgb(119, 5, 5);
+}
+.form_group label{
+    display:block;
+    font-size: 24px;
+    color: rgb(55, 54, 85);
+    
+}
+.form_group input{
+width: 30%;
+box-sizing: border-box;
+border: solid 3px rgb(232, 191, 176);
+color: black;
+padding: 15px 0 10px;
+font-family: inherit;
+}
+.msg{
+    font-size: 24px;
+    color: rgb(55, 54, 85);    
+}
+.msg textarea{
+    border: solid 3px;
+}
+.btn{
+    background-color: rgb(7, 6, 6);
+    color: antiquewhite;
+    border: solid 3px rgb(239, 215, 215);
+    padding: 15px 20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+
+@mixin newMsg($colory,$colory1) {
+    width: 450px;
+    height: 45px;
+    padding:20px;
+    text-align: center;
+    font-size: 24px;
+    border: solid;
+    display: flex;
+    background-color:$colory;
+    color: $colory1 
+    
+}
+.error{
+    @include newMsg($colory:red,$colory1:orange);
+
+
+}
+.success{
+@include newMsg($colory:green,$colory1:blue);
+
+}
